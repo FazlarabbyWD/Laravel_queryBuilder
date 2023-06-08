@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         //    $result=DB::table('products')->get();
         //    return $result;
@@ -100,25 +100,28 @@ class TestController extends Controller
         //  $result=DB::table('products')->whereNotIn('price',[234,100])->get();
         // return $result;
 
-        $result=DB::table('products') ->where('price','>',2000)
-        ->orWhere('price','=',234)
+        // $result=DB::table('products') ->where('price','>',2000)
+        // ->orWhere('price','=',234)
 
-        ->get();
+        // ->get();
 
-        return $result;
+        // $result=DB::table('brands')
+        // ->insert([
 
+        //     'brandName'=>"freeland",
+        //     'brandImg'=>"demo Img"
+        // ]);
 
+        // return $result;
 
+        // $result=DB::table('brands')->insert($request->input());
 
+        // return $request;
 
+        // $result=DB::table('brands')->where('id','=',$request->id)
+        // ->update($request->input());
 
-
-
-
-
-
-
-
+        // return $result;
 
 
 
